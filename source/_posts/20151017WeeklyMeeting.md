@@ -105,7 +105,11 @@ date: 2015-10-17 19:47:10
             </tr>
         </tbody>
     </table>
+    </section>
 </section>
+<section data-background-transition="zoom" data-background="#4d7e65" data-transition="slide">
+    <h2>运气大比拼<button class="fragment" id="whoIsLucky" style="width:50px;height:30px;color:red">人品</button></h2>
+    <h4 id="who">介绍git</h2>
 </section>
 <section>
     <h2><a href="/2015/10/17/20151017WeeklyPlanning/" target="_blank">下周任务</a>简介</h2>
@@ -113,4 +117,28 @@ date: 2015-10-17 19:47:10
 <section>
     <h2>任何问题？</h2>
 </section>
+<script src="/libs/jquery-1.11.3.min.js" type="text/javascript"></script>
+<script>
+    var dice;
+    var who;
+    $(document).ready(function(){
+        $("#whoIsLucky").click(whoIsLucky);
+        $(document).keyup(function(evt) {
+            if (evt.keyCode == 13) {
+                if(dice){
+                    clearInterval(dice);
+                }
+            }
+        });
+    });
+    
+    function whoIsLucky(){
+        var members = ["曾䶮","仇紫荷","应泽峰","傅思喆"];
+        dice = setInterval(function(){ 
+            who = members[Math.floor(Math.random()*4)];
+        $("#who").text(who+"介绍Git");
+        $("#whoIsLucky").off('click');
+        }, 50);
+    }
+</script>
 {% endraw %}
