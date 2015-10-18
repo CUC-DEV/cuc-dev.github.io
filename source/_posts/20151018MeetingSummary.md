@@ -22,6 +22,20 @@ tags: [weekly]
 - Git学习
 在这次会议中，现场完成了一次push提交冲突的解决的测试。
 
+# 补充资料
+- Linux入门学习视频：慕课网[Linux达人养成计划](http://www.imooc.com/learn/175)
+- Git视频教程：慕课网[版本控制入门 – 搬进 Github](http://www.imooc.com/learn/390)
+
+# 额外任务
+- 大家更改一下Github上面的头像
+- 确认git设置,执行`git config --global -l`确认以下三项正确设置
+	1. `user.email=mengyu.liu@live.com`
+	2. `user.name=Mengyu LIU`
+	3. `core.editor=vim`
+- 学习vim编辑器： 打开terminal，执行`vimtutor`学习vim(4h任务量)，建议每天1h
+- 学习Presentation制作：[revealjs](https://github.com/hakimel/reveal.js/)
 
 # 下次会议的内容
-总结一周工作内容，讲解Git学习的PPT,大家更改一下Github上面的头像；
+- 总结一周工作内容
+- 演示网站原型
+- 讲解Git学习的PPT（仇紫荷）和JS学习的PPT（待定）
