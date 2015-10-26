@@ -2,10 +2,10 @@ title: 第三次例会总结
 date: 2015-10-26 14:13:15
 tags: [weekly]
 ---
-![寸积铢累](/img/autumn.jpg) 
->锲而舍之，朽木不折；锲而不舍，金石可镂。
+![阿伦艾弗森](/img/iverosn.jpg) 
 >
->-- <cite>荀子</cite>
+>
+>
 
 # 信息
 - 出席组员：潘达，方糖，曾䶮,仇紫荷，应泽峰，傅思喆
@@ -15,32 +15,27 @@ tags: [weekly]
 # 简述
 本文档在于整理会议发言，记录会议总结.本次会议对上周工作进行总结，上周主要完成了以下几个工作
 - 学习vim（每天1h）
-- 学习git，慕课网视频和文本教程前三章（一定要熟练掌握）
+- 学习git
 - w3cschool学习html基本知识
+  zen-coding
 - w3cschool学习css基本知识
 - w3cschool学习javascript基本知识
 - w3cschool学习jquery基本知识
+- 阿里云配置
+域名购买 neomedia.top
+安装jira: jira.neomedia.top
+安装jenkins: jenkins.neomedia.top
+通告网站: news.neomedia.top
+实验室网站原型: lab.neomedia.top(欢迎乱点)
+实验室网站原型: dev.lab.neomedia.top(暂未开放)
 - 注册jira
+- hexo与reveal.js的学习
+在这次会议中，现场进行了网页端ppt的教学
 - Daily报告
-- 
-单元测试的情况是对可能出现的有意义的情况进行测试，小组成员需要在开展代码工作之前商量好可能出现的情况以及函数名称变量名称等。
-- 
-在这次会议中，现场完成了一次push提交冲突的解决的测试。
-
-# 补充资料
-- Linux入门学习视频：慕课网[Linux达人养成计划](http://www.imooc.com/learn/175)
-- Git视频教程：慕课网[版本控制入门 – 搬进 Github](http://www.imooc.com/learn/390)
 
 # 额外任务
-- 大家更改一下Github上面的头像
-- 确认git设置,执行`git config --global -l`确认以下三项正确设置
-	1. `user.email=mengyu.liu@live.com`
-	2. `user.name=Mengyu LIU`
-	3. `core.editor=vim`
-- 学习vim编辑器： 打开terminal，执行`vimtutor`学习vim(4h任务量)，建议每天1h
-- 学习Presentation制作：[revealjs](https://github.com/hakimel/reveal.js/)
+- Linux下中文输入法安装
+
 
 # 下次会议的内容
-- 总结一周工作内容
-- 演示网站原型
-- 讲解Git学习的PPT（仇紫荷）和JS学习的PPT（待定）
+- 
