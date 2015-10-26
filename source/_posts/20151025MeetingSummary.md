@@ -2,7 +2,7 @@ title: 第三次例会总结
 date: 2015-10-26 14:13:15
 tags: [weekly]
 ---
-![阿伦艾弗森](/img/iverosn.jpg) 
+![阿伦艾弗森](/img/iverson.jpg) 
 >
 >
 >
