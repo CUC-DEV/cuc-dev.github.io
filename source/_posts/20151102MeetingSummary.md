@@ -2,7 +2,7 @@ title: 第四次例会总结
 date: 2015-11-01 22:08:16
 tags: [weekly]
 ---
-![ ](/img/fusizhe/meetingsummary/summaryimg1.jpg)
+![ ](/img/fusizhe/meetingsummary/summaryimg1)
 >-- <cite>It's my life</cite>
 
 # 信息
@@ -27,7 +27,7 @@ tags: [weekly]
 
 # 知识点讲解
 - 网站工作流程：
-![网站工作流程](/img/fusizhe/meetingsummary/summaryimg2.png)
+![网站工作流程](/img/fusizhe/meetingsummary/summaryimg2)
 - Jade知识点
  - locals里的变量均在Jade可见
  - render()作用——渲染模板
