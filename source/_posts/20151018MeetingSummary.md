@@ -2,7 +2,7 @@ title: 第二次例会总结
 date: 2015-10-18 21:08:36
 tags: [weekly]
 ---
-![寸积铢累](/img/autumn.jpg) 
+![寸积铢累](/img/autumn.png) 
 >锲而舍之，朽木不折；锲而不舍，金石可镂。
 >
 >-- <cite>荀子</cite>
