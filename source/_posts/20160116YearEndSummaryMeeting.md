@@ -19,7 +19,7 @@ date: 2016-01-16 03:00:00
         <small>2016年01月16日</small>
     </p>
 </section>
-<section>
+<section data-background-transition="zoom" data-background="#4d7e65" data-transition="slide">
     <section>
         <h2>多媒体项目</h2>
     </section>
@@ -51,7 +51,7 @@ date: 2016-01-16 03:00:00
      </ul>
     </section>
 </section>
-<section>
+<section data-background-transition="zoom" data-background="#118C4E" data-transition="slide">
     <section>
         <h2>Techo</h2>
     </section>
@@ -104,7 +104,7 @@ date: 2016-01-16 03:00:00
             <h3 class="fragment">Who?</h3>
         </section>
 </section>
-<section>
+<section data-background-transition="zoom" data-background="#558C89" data-transition="slide">
     <section>
         <h2>Agile + Devops</h2>
     </section>
@@ -128,7 +128,7 @@ date: 2016-01-16 03:00:00
         <h3 class="fragment">Who ?</h3>
     </section>
 </section>
-<section>
+<section data-background-transition="zoom" data-background="#6DBDD6" data-transition="slide">
     <section>
         <h2>工程组成立</h2>
     </section>
