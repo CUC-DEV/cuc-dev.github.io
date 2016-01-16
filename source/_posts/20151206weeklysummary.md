@@ -1,6 +1,6 @@
 title: 第八次例会总结
 date: 2015-12-08 09:00:14
-tags:[weekly]
+tags: [weekly]
 ---
 ![ ](/img/AI2.jpg)
 >-- <cite>安逸与我们相隔万里，我们赤足跋涉翻山越岭！</cite>
