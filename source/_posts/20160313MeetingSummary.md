@@ -1,4 +1,4 @@
-title: 20160313MeetingSummary
+title: 2015--2016下半学期第二次例会总结
 date: 2016-03-16 21:52:33
 tags: [weekly]
 ---
