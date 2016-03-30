@@ -21,7 +21,7 @@ tags: [weekly]
 # 补充工具
 - evernote（印象笔记）：存储所有的帐号密码
 - 帐号：cuc.dev@hotmail.com
-- 密码：imc608 
+- 密码：询问师姐
 
 # 任务
 - 新媒体项目
