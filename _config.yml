@@ -70,4 +70,5 @@ theme: black
 deploy:
   type: git
   repository: git@github.com:CUC-DEV/cuc-dev.github.io.git
+  repository: ssh://git.neomedia.top:29418/imc/news.git 
   branch: master
