@@ -31,13 +31,13 @@ tags: [weekly]
  - 显示数据库`show dbs`
  - 使用数据库`use demo-dev`
  - 导出数据库`mongodb dump -h neomedia.top -p27017 -d demo-dev`
-- linux:touch 新建文件夹
+- linux:touch 新建文件
  - less 显示文件内容
  - echo "123">test  写入到test文件
  - tail 查看文件尾部:
  - tail -f 自动更新到文件尾部:用于日志查看，保证服务器启动
  - ssh 链接某一远程端口
- -  ps 后台进程查看:sudo ps aux/grep 'chrome'
+ -  ps 后台进程查看:sudo ps aux|grep 'chrome'
  - netstat 显示网络相关信息：列出所有端口 netstat -a
  - kill 终止后台进程
  - sudo restart gitblit 重启
