@@ -11,14 +11,14 @@ tags: [使用文档]
  - 在初始界面点击用户，即进入用户界面
  - 点击‘Create 用户’即可创建用户
  - 如图
- ![ ](/img/yingzefeng/添加用户.PNG)
+ ![ ](/img/yingzefeng/add_user.PNG)
  - 点击创建完成的用户名可以进入用户具体信息页面，如图
   - 可以具体修改用户信息
   - 点击右下角delete用户可以删除用户，点击左下角save保存用户信息
- ![ ](/img/yingzefeng/用户信息.PNG)
+ ![ ](/img/yingzefeng/user_info.PNG)
  - 创建完成
  - 如图
- ![ ](/img/yingzefeng/用户.PNG)
+ ![ ](/img/yingzefeng/user.PNG)
  - 点击‘Add Filter’可以通过是否为管理员或email等条件进行筛选
  - 点击‘columns’可以选择需要输出的用户信息
  - 点击ordered by后可以选择排列顺序
@@ -38,10 +38,10 @@ tags: [使用文档]
   - 点击首页新闻可以将该条新闻设为首页新闻
   - 在详情中输入新闻的完整信息
   - 如图
-![ ](/img/yingzefeng/单条新闻.PNG)
+![ ](/img/yingzefeng/news.PNG)
  - 在次导航栏点击新闻类别，进入新闻类别页面
   - 可以添加，删除新闻类别,其他操作类似新闻页面，创建完成如图
-![ ](/img/yingzefeng/新闻类别.PNG)
+![ ](/img/yingzefeng/news_type.PNG)
 
 # 4.研究界面
  - 在导航栏点击研究进入研究界面，其中分为两个子页面，研究成果和研究成果类别
@@ -52,11 +52,11 @@ tags: [使用文档]
   - 点击右下角的delete研究成果可以删除这条成果
   - 点击save保存
   - 如图
-![ ](/img/yingzefeng/单条研究成果.PNG)
+![ ](/img/yingzefeng/research.PNG)
  - 在次导航栏点击研究成果类别，进入研究成果类别页面
   - 可以添加，删除研究成果类别
   - 其他操作类似新闻类别页面，创建完成如图
-![ ](/img/yingzefeng/研究成果类别.PNG)
+![ ](/img/yingzefeng/research_type.PNG)
 
 # 5.成员界面
  - 在导航栏点击成员进入成员页面
@@ -65,7 +65,7 @@ tags: [使用文档]
   - 下拉照片栏可以选择在图片库保存的照片，点击右侧view可以预览照片
   - 下拉获奖情况选择在库中保存的具体获奖
   - 如图
-![ ](/img/yingzefeng/个人成员.PNG)
+![ ](/img/yingzefeng/member.PNG)
  - 点击成员名左侧的垃圾桶删除该成员信息
  - 点击‘columns’可以选择需要输出的成员信息
  - 点击’ordered by‘后可以选择成员排列顺序
@@ -77,14 +77,14 @@ tags: [使用文档]
   - 下拉状态栏选择发布或是草稿状态
   - 下拉归属类别选择照片属于的类
   - 点击upload image上传图片
-![ ](/img/yingzefeng/添加图片.PNG)
+![ ](/img/yingzefeng/add_img.PNG)
 
 # 7.文本界面
  - 在导航栏点击文本进入文本页面，点击create文本信息创建一条文本
   - 技术参数指在库中该条文本对应的名，
   - brief后输入文本简介
   - detail后输入具体文本
-![ ](/img/yingzefeng/文本.PNG)
+![ ](/img/yingzefeng/text.PNG)
  - 点击文本左侧的垃圾桶可以删除这条文本
  
 # 8.other界面
@@ -92,8 +92,8 @@ tags: [使用文档]
   - 点击create获奖情况创建一条获奖，并输入具体情况
   - 点击upload file上传相关文件
   - 填写链接用于跳转到相关获奖页面
-![ ](/img/yingzefeng/获奖情况.PNG)
+![ ](/img/yingzefeng/prize.PNG)
  - 点击初始页面下论文进入论文页面
   - 点击create论文创建一条论文信息，并输入具体情况如图
-![ ](/img/yingzefeng/单论文.PNG)
+![ ](/img/yingzefeng/paper.PNG)
   - 点击upload file上传相关文件
