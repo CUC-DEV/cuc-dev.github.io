@@ -1,6 +1,6 @@
 title: imc实验室网站后台使用文档
 date: 2016-04-02 15:23:33
-tags: [使用文档]
+tags: [use guide]
 ---
 # 1.后台登录
  - 输入网站后台地址[imc后台首页](http://imc.cuc.edu.cn/keystone)

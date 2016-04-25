@@ -1,6 +1,6 @@
 title:  实验室网站架构图
 date: 2016-04-01 20:01:22
-tags: [网站架构图, qiuzihe]
+tags: [architecture, qiuzihe]
 ---
 
 # 实验室网站架构图

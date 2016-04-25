@@ -68,7 +68,9 @@ theme: black
 # Deployment
 ## Docs: http://hexo.io/docs/deployment.html
 deploy:
-  type: git
-  repository: git@github.com:CUC-DEV/cuc-dev.github.io.git
+- type: git
   repository: ssh://git.neomedia.top:29418/imc/news.git 
+  branch: master
+- type: git
+  repository: git@github.com:CUC-DEV/cuc-dev.github.io.git
   branch: master
