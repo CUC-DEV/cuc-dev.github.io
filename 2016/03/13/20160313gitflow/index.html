@@ -1,0 +1,215 @@
+
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    
+    <title>git-flow简介 | CUC-IMC攻城狮</title>
+    
+    <link rel="alternative" href="/atom.xml" title="CUC-IMC攻城狮" type="application/atom+xml">
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+    <link rel="stylesheet" href="/libs/fancybox/jquery.fancybox.css" charset="utf-8">
+    
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body class="site">
+    <header class="site-header">
+        <h1 class="site-title"><a href="/">CUC-IMC攻城狮</a></h1>
+        <nav class="site-nav">
+            <ul class="nav">
+                
+                <li><a href="/archives">Archives</a></li>
+                
+                
+                <li><a href="/atom.xml" title="RSS Feed">rss</a></li>
+                
+                <li><a class="toggle-search" href="#search">search</a></li>
+            </ul>
+        </nav>
+        <div class="site-search" id="search">
+            <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><input type="hidden" name="sitesearch" value="http://team.neomedia.top"></form>
+        </div>
+        
+            <div class="site-header-background" style="background-image:url(http://reumia.github.io/hexo-theme-zzoman2015/images/background-zzoman2015.jpg)"></div>
+        
+    </header>
+    <div class="site-body">
+        <div class="global-width">
+    <article class="article" data-layout="post" data-slug="20160313gitflow">
+        <div class="article-content">
+            
+            
+            <header class="article-header">
+                <div class="article-meta">
+                    <a href="/2016/03/13/20160313gitflow/" class="article-date">
+  <time datetime="2016-03-13T02:26:47.000Z">2016-03-13</time>
+</a>
+                    
+                    
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git-pro/">git pro</a></li></ul>
+
+                </div>
+                
+    <h1 class="article-title" itemprop="name">
+      <a href="/2016/03/13/20160313gitflow/">git-flow简介</a>
+    </h1>
+
+            </header>
+            
+            <div class="article-body">
+                <h1 id="git-flow"><a href="#git-flow" class="headerlink" title="git flow"></a>git flow</h1><h1 id="五分支"><a href="#五分支" class="headerlink" title="五分支"></a>五分支</h1><ul>
+<li>主分支master<ul>
+<li>发布到生产环境的代码</li>
+</ul>
+</li>
+<li>开发分支develop<ul>
+<li>主开发分支保存当前最新开发成果</li>
+</ul>
+</li>
+<li>功能分支feature <ul>
+<li>开发新功能</li>
+<li>develop分支发起</li>
+<li>必须合并回develop分支</li>
+</ul>
+</li>
+<li>补丁分支hotfix <ul>
+<li>修补新bug用于紧急修复</li>
+</ul>
+</li>
+<li>预发分支release<ul>
+<li>发布正式版本之前预发</li>
+<li>必须合并回develop分支和master分支</li>
+<li>允许做小的缺陷修正、准备发布版本所需的各项说明信息<h1 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h1></li>
+</ul>
+</li>
+<li>简化了git的使用，并且增加了一个规范的使用方式，是git的脚本增强。<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1></li>
+<li>安装gitflow <code>sudo apt-get install git-flow</code></li>
+<li>初始化: git flow init  <ul>
+<li>设置分支名</li>
+</ul>
+</li>
+<li>start finish publish pull</li>
+<li>开发一个功能<ul>
+<li><code>git flow feature start &lt;your feature&gt;</code></li>
+<li><code>git flow feature finish &lt;your feature&gt;</code></li>
+</ul>
+</li>
+<li>上传到服务器或者更新<ul>
+<li><code>git flow feature publish &lt;name&gt;</code></li>
+<li><code>git flow feature pull &lt;remote&gt; &lt;name&gt;</code></li>
+</ul>
+</li>
+<li>修补bug<ul>
+<li><code>git flow hotfix start &lt;release&gt;</code></li>
+<li><code>git flow hotfix finish &lt;release&gt;</code></li>
+</ul>
+</li>
+</ul>
+
+            </div>
+        </div>
+    </article>
+
+    
+    
+<nav class="article-nav">
+  
+    <a href="/2016/03/16/20160313MeetingSummary/" id="article-nav-newer" class="article-nav-link-wrap prev">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          2015--2016下半学期第二次例会总结
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/03/07/20160307MeetingSummary /" id="article-nav-older" class="article-nav-link-wrap next">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">2015--2016下半学期第一次例会总结</div>
+    </a>
+  
+</nav>
+
+    
+
+    
+</div>
+    </div>
+    <footer class="site-footer">
+        <div class="global-width">
+            <ul class="site-widget">
+                
+                <li class="widget widget-tag">
+                    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget-body">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux-Pro/">Linux Pro</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/LinuxServer/">LinuxServer</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MUST-READ/">MUST-READ</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Qiuzihe/">Qiuzihe</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/RequirementDocument/">RequirementDocument</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/architecture/">architecture</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/fusizhe/">fusizhe</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git-pro/">git pro</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/management/">management</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/markdown/">markdown</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nodejs/">nodejs</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/presentation/">presentation</a><span class="tag-list-count">15</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/qiuzihe/">qiuzihe</a><span class="tag-list-count">10</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ssh/">ssh</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/task/">task</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tuto/">tuto</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/uml/">uml</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/use-guide/">use guide</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/webtestresult-qiuzihe/">webtestresult qiuzihe</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/weekly/">weekly</a><span class="tag-list-count">20</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/zengyan/">zengyan</a><span class="tag-list-count">6</span></li></ul>
+    </div>
+  </div>
+
+                </li>
+                
+                <li class="widget widget-category">
+                    
+                </li>
+                
+                <li class="widget widget-recent_posts">
+                    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget-body">
+      <ul>
+        
+          <li>
+            <a href="/2016/05/29/20160529Qzh/">仇紫荷个人学习总结</a>
+          </li>
+        
+          <li>
+            <a href="/2016/05/22/20160522MeetingSummary/">2015-2016下学期第八次例会总结</a>
+          </li>
+        
+          <li>
+            <a href="/2016/05/17/20160516MeetringSummary/">2015-2016下学期第七次例会总结</a>
+          </li>
+        
+          <li>
+            <a href="/2016/05/09/20160508MeetingSummary/">2015-2016下学期第六次例会总结</a>
+          </li>
+        
+          <li>
+            <a href="/2016/05/08/20160508WeeklyMeeting/">20160508周例会</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+                </li>
+                
+            </ul>
+        </div>
+        <div class="site-info">
+            <address>
+                &copy; 2014 <a href="http://team.neomedia.top">CUC-IMC攻城狮</a> All Right Reserved. <br/>
+                Powered by <a href="http://hexo.io">Hexo</a>. Theme by <a href="http://zzoman.com">ZZOMAN</a> <br/>
+                方糖维护<a href="mailto:mengyu.dev@outlook.com?Subject=neomedia" target="_top">，联系 Send mail</a>
+            </address>
+        </div>
+    </footer>
+    
+    <script src="/libs/jquery-1.11.3.min.js" type="text/javascript"></script>
+    
+    <script src="/libs/fancybox/jquery.fancybox.js" type="text/javascript"></script>
+    
+    <script src="/js/site_init.js" type="text/javascript"></script>
+</body>
+</html>

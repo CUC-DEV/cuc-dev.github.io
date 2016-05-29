@@ -1,0 +1,185 @@
+
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    
+    <title>hexostudy2:搭建hexo博客 | CUC-IMC攻城狮</title>
+    
+    <link rel="alternative" href="/atom.xml" title="CUC-IMC攻城狮" type="application/atom+xml">
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+    <link rel="stylesheet" href="/libs/fancybox/jquery.fancybox.css" charset="utf-8">
+    
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body class="site">
+    <header class="site-header">
+        <h1 class="site-title"><a href="/">CUC-IMC攻城狮</a></h1>
+        <nav class="site-nav">
+            <ul class="nav">
+                
+                <li><a href="/archives">Archives</a></li>
+                
+                
+                <li><a href="/atom.xml" title="RSS Feed">rss</a></li>
+                
+                <li><a class="toggle-search" href="#search">search</a></li>
+            </ul>
+        </nav>
+        <div class="site-search" id="search">
+            <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><input type="hidden" name="sitesearch" value="http://team.neomedia.top"></form>
+        </div>
+        
+            <div class="site-header-background" style="background-image:url(http://reumia.github.io/hexo-theme-zzoman2015/images/background-zzoman2015.jpg)"></div>
+        
+    </header>
+    <div class="site-body">
+        <div class="global-width">
+    <article class="article" data-layout="post" data-slug="20160227hexostudy2">
+        <div class="article-content">
+            
+            
+            <header class="article-header">
+                <div class="article-meta">
+                    <a href="/2016/02/27/20160227hexostudy2/" class="article-date">
+  <time datetime="2016-02-27T06:27:14.000Z">2016-02-27</time>
+</a>
+                    
+                    
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/zengyan/">zengyan</a></li></ul>
+
+                </div>
+                
+    <h1 class="article-title" itemprop="name">
+      <a href="/2016/02/27/20160227hexostudy2/">hexostudy2:搭建hexo博客</a>
+    </h1>
+
+            </header>
+            
+            <div class="article-body">
+                <p>如何利用hexo来搭建一个文档网站？<br>所谓的文档网站，也可以理解为一个静态的博客。可以用于日后实验室把一些重要的文档整理上线。</p>
+<p>#hexo的安装</p>
+<ul>
+<li>在安装hexo之前需要先安装Node.js和git这里我就不再赘述了。</li>
+<li>然后利用 npm 命令即可安装hexo</li>
+<li>npm install -g hexo<br>#创建hexo文件夹<br>安装完成后，在本地新建一个文件夹，我新建的文件夹为zzzengyan.github.io，然后在这个文件夹下执行以下命令行hexo init。Hexo 即会自动在目标文件夹建立网站所需要的所有文件。<br>然后执行命令行npm install安装依赖包<br>#本地查看<br>现在我们已经搭建起本地的hexo博客了，执行以下命令，然后到浏览器输入localhost:4000看看。</li>
+<li>hexo generate</li>
+<li><p>hexo server<br><img src="/img/hexo/2/1.png" alt="本地查看"><br>这便创建了一个简单的静态博客网站<br><img src="/img/hexo/2/2.png" alt="本地查看"><br>#配置github<br>由于之前的github账号已经利用hexo搭建过静态网站了。为了现身说法。特意再申请一个github账户。<br>为了将能够将我们的代码托管在github上。首先需要配置Github，建立与你用户名对应的仓库，仓库名必须为your_user_name.github.io，仓库名必须为your_user_name.github.io，仓库名必须为your_user_name.github.io。重要的事情说三遍。<br>下图为我配置的github账号以及建立的对应的仓库。<br><img src="/img/hexo/2/3.png" alt="配置github"><br>#部署<br>编辑_config.yml。你在部署时，要把下面的zzzengyan都换成你的账号名。</p>
+</li>
+<li><p>deploy:</p>
+</li>
+<li>type: git</li>
+<li>repository: <a href="https://github.com/zzzengyan/zzzengyan.github.io.git" target="_blank" rel="external">https://github.com/zzzengyan/zzzengyan.github.io.git</a></li>
+<li>branch: master<br><img src="/img/hexo/2/4.png" alt="部署"><br>执行下列指令即可完成部署。</li>
+<li>1 hexo generate</li>
+<li>2 hexo deploy</li>
+</ul>
+<p>大家可以尝试部署一下，看下会出现什么问题。我在下篇文章中会进行详解。</p>
+
+            </div>
+        </div>
+    </article>
+
+    
+    
+<nav class="article-nav">
+  
+    <a href="/2016/02/27/20160227hexostudy3/" id="article-nav-newer" class="article-nav-link-wrap prev">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          hexostudy3:hexo部署详解
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/02/27/20160227hexostudy1/" id="article-nav-older" class="article-nav-link-wrap next">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">hexo-study:hexo介绍</div>
+    </a>
+  
+</nav>
+
+    
+
+    
+</div>
+    </div>
+    <footer class="site-footer">
+        <div class="global-width">
+            <ul class="site-widget">
+                
+                <li class="widget widget-tag">
+                    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget-body">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux-Pro/">Linux Pro</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/LinuxServer/">LinuxServer</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MUST-READ/">MUST-READ</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Qiuzihe/">Qiuzihe</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/RequirementDocument/">RequirementDocument</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/architecture/">architecture</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/fusizhe/">fusizhe</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git-pro/">git pro</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/management/">management</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/markdown/">markdown</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nodejs/">nodejs</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/presentation/">presentation</a><span class="tag-list-count">15</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/qiuzihe/">qiuzihe</a><span class="tag-list-count">10</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ssh/">ssh</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/task/">task</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tuto/">tuto</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/uml/">uml</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/use-guide/">use guide</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/webtestresult-qiuzihe/">webtestresult qiuzihe</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/weekly/">weekly</a><span class="tag-list-count">20</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/zengyan/">zengyan</a><span class="tag-list-count">6</span></li></ul>
+    </div>
+  </div>
+
+                </li>
+                
+                <li class="widget widget-category">
+                    
+                </li>
+                
+                <li class="widget widget-recent_posts">
+                    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget-body">
+      <ul>
+        
+          <li>
+            <a href="/2016/05/29/20160529Qzh/">仇紫荷个人学习总结</a>
+          </li>
+        
+          <li>
+            <a href="/2016/05/22/20160522MeetingSummary/">2015-2016下学期第八次例会总结</a>
+          </li>
+        
+          <li>
+            <a href="/2016/05/17/20160516MeetringSummary/">2015-2016下学期第七次例会总结</a>
+          </li>
+        
+          <li>
+            <a href="/2016/05/09/20160508MeetingSummary/">2015-2016下学期第六次例会总结</a>
+          </li>
+        
+          <li>
+            <a href="/2016/05/08/20160508WeeklyMeeting/">20160508周例会</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+                </li>
+                
+            </ul>
+        </div>
+        <div class="site-info">
+            <address>
+                &copy; 2014 <a href="http://team.neomedia.top">CUC-IMC攻城狮</a> All Right Reserved. <br/>
+                Powered by <a href="http://hexo.io">Hexo</a>. Theme by <a href="http://zzoman.com">ZZOMAN</a> <br/>
+                方糖维护<a href="mailto:mengyu.dev@outlook.com?Subject=neomedia" target="_top">，联系 Send mail</a>
+            </address>
+        </div>
+    </footer>
+    
+    <script src="/libs/jquery-1.11.3.min.js" type="text/javascript"></script>
+    
+    <script src="/libs/fancybox/jquery.fancybox.js" type="text/javascript"></script>
+    
+    <script src="/js/site_init.js" type="text/javascript"></script>
+</body>
+</html>

@@ -1,0 +1,158 @@
+
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>20160508周例会</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="/libs/reveal/css/reveal.css">
+		<link rel="stylesheet" href="/libs/reveal/css/theme/blood.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="/libs/reveal/lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? '/libs/reveal/css/print/pdf.css' : '/libs/reveal/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="/libs/reveal/lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				
+<style>
+.one-third {
+    vertical-align: top !important;
+    width: 30%;
+    display: inline-block;
+}
+</style>
+<section>
+    <h1>工程组项目会议</h1>
+    <p>
+        <small>2016年05月08日</small>
+    </p>
+</section>
+<section>
+    <section>
+        <h2>前两周总结</h2>
+        <p class="fragment">五一玩耍的愉快吗</p>
+    </section>
+    <section>
+        <h2>每人回顾与总结</h2>
+         <div class="one-third">
+            <h4 style="color:red">未完成</h4>
+            <h3>?<h3>
+        </h3></h3></div>
+        <div class="one-third">
+            <h4 style="color:yellow">已完成</h4>
+            <h3>?<h3>
+        </h3></h3></div>
+        <div class="one-third">
+            <h4 style="color:green;">问题</h4>
+            <h3>?<h3>
+        </h3></h3></div>
+    </section>
+    <section>
+        <h2>任何问题？</h2>
+    </section>
+</section>
+<section>
+<section>
+<h2>It's good, but it could be better</h2>
+  <ul>
+      <li class="fragment">git flow</li>
+      <li class="fragment">git ignore</li>
+      <li class="fragment">slack</li>
+      <li class="fragment">公告板文件名称和tag只能是英文</li>
+  </ul>
+</section>
+<section>
+    <h2>拓展</h2>
+    <ul>
+        <li class="fragment">restful api</li>
+        <li class="fragment">json-server</li>
+        <li class="fragment">jquery ajax</li>
+        <li class="fragment">mocking</li>
+    </ul>
+</section>
+<section>
+    <h2>任务</h2>
+  <ul>
+      <li class="fragment">美化界面</li>
+      <li class="fragment">使用git flow</li>
+      <li class="fragment">js静态交互</li>
+      <li class="fragment">js动态交互</li>
+      <li class="fragment">单元测试qunit</li>
+  </ul>
+</section>
+<section>
+    <h2>注意事项</h2>
+  <ul>
+      <li class="fragment">采用统一的component</li>
+      <li class="fragment">小修改不分支</li>
+      <li class="fragment">思考api，写上注释</li>
+      <li class="fragment">多交流</li>
+  </ul>
+</section>
+</section>
+<section>
+    <h2>任何问题？</h2>
+</section>
+
+			</div>
+
+		</div>
+
+		<script src="/libs/reveal/lib/js/head.min.js"></script>
+		<script src="/libs/reveal/js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: '/libs/reveal/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: '/libs/reveal/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '/libs/reveal/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '/libs/reveal/plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: '/libs/reveal/plugin/zoom-js/zoom.js', async: true },
+					{ src: '/libs/reveal/plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
+

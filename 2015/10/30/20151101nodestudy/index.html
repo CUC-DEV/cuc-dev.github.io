@@ -1,0 +1,144 @@
+
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>nodejs学习总结应泽峰</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="/libs/reveal/css/reveal.css">
+		<link rel="stylesheet" href="/libs/reveal/css/theme/blood.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="/libs/reveal/lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? '/libs/reveal/css/print/pdf.css' : '/libs/reveal/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="/libs/reveal/lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				
+<section>
+    <h1>nodejs学习总结</h1>
+</section>
+<section>
+  <h2>nodejs</h2>
+  <section>
+  <h3>什么是node?</h3>
+  <li>Node是JavaScript语言的服务器运行环境。</li>
+  <li class="fragment">提供大量工具库，使得JavaScript语言与操作系统互动</li>
+  </section>
+</section>
+
+<section>
+  <h2>搭建http服务器</h2>
+<section>
+  <h3>1.模块化</h3>
+  <li>require()</li>
+  <p>require命令用于指定加载模块，加载时可以省略脚本文件的后缀名</p>
+  <p>模块可以是自己定义的也可以是其本身自带的功能模块</p>
+  <p>如:http：提供HTTP服务器功能。</p>
+</section>
+<section>
+  <h3>2,调用方法</h3>
+  <li>http.createServer(function (request, response){}</li>
+  <li>ceateServer方法接受一个函数作为参数，该函数的request参数是一个对象，表示客户端的HTTP请求</li>
+  <li>response参数也是一个对象，表示服务器端的HTTP回应</li>
+</section>
+<section>
+  <h4>3,通过 http.listen() 方法就可以让该 HTTP 服务器在特定端口监听。</h4>
+</section>
+<section>
+  <h3>4,调用</h3>
+  <li>用node调用这个文件，服务器就开始运行了。</li>
+</section>
+</section>
+<section>
+  <h3>express框架</h3>
+  <li>目前最流行的基于Node.js的Web开发框架，可以快速地搭建一个完整功能的网站</li>
+</section>
+<section>
+  <h3>express项目结构</h3>
+  <li>app.js： 项目入口</li>
+  <li>node_modules： 存放项目的依赖库</li>
+  <li>package.json： 项目依赖配置及开发者信息</li>
+  <li>routes： 路由文件</li>
+  <li>Views： 页面文件</li>
+</section>
+<section>
+  <h3>express方法</h3>
+  <section>
+  <li>app.listen()</li>
+  <p>在给定的主机和端口上监听请求</p>
+  <li> app.set(name, value)</li>
+  <p>set()为设置 name 的值设为 value</p>
+  </section>
+  <section>
+  <li>app.engine</li>
+  <p>重新设置模板文件的扩展名</p>
+  <li> app.use([path], function)</li>
+  <p>使用中间件 function,</p>
+  </section>
+</section>
+<section>
+<h1>THANKS</h1>
+</section>
+
+			</div>
+
+		</div>
+
+		<script src="/libs/reveal/lib/js/head.min.js"></script>
+		<script src="/libs/reveal/js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: '/libs/reveal/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: '/libs/reveal/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '/libs/reveal/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '/libs/reveal/plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: '/libs/reveal/plugin/zoom-js/zoom.js', async: true },
+					{ src: '/libs/reveal/plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
+

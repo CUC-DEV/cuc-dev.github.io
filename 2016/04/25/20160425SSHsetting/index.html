@@ -1,0 +1,183 @@
+
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    
+    <title>配置远程Linux服务器SSH密钥认证自动登录 | CUC-IMC攻城狮</title>
+    
+    <link rel="alternative" href="/atom.xml" title="CUC-IMC攻城狮" type="application/atom+xml">
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+    <link rel="stylesheet" href="/libs/fancybox/jquery.fancybox.css" charset="utf-8">
+    
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body class="site">
+    <header class="site-header">
+        <h1 class="site-title"><a href="/">CUC-IMC攻城狮</a></h1>
+        <nav class="site-nav">
+            <ul class="nav">
+                
+                <li><a href="/archives">Archives</a></li>
+                
+                
+                <li><a href="/atom.xml" title="RSS Feed">rss</a></li>
+                
+                <li><a class="toggle-search" href="#search">search</a></li>
+            </ul>
+        </nav>
+        <div class="site-search" id="search">
+            <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><input type="hidden" name="sitesearch" value="http://team.neomedia.top"></form>
+        </div>
+        
+            <div class="site-header-background" style="background-image:url(http://reumia.github.io/hexo-theme-zzoman2015/images/background-zzoman2015.jpg)"></div>
+        
+    </header>
+    <div class="site-body">
+        <div class="global-width">
+    <article class="article" data-layout="post" data-slug="20160425SSHsetting">
+        <div class="article-content">
+            
+            
+            <header class="article-header">
+                <div class="article-meta">
+                    <a href="/2016/04/25/20160425SSHsetting/" class="article-date">
+  <time datetime="2016-04-25T05:54:16.000Z">2016-04-25</time>
+</a>
+                    
+                    
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/qiuzihe/">qiuzihe</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ssh/">ssh</a></li></ul>
+
+                </div>
+                
+    <h1 class="article-title" itemprop="name">
+      <a href="/2016/04/25/20160425SSHsetting/">配置远程Linux服务器SSH密钥认证自动登录</a>
+    </h1>
+
+            </header>
+            
+            <div class="article-body">
+                <h1 id="1-在本地机器创建公钥"><a href="#1-在本地机器创建公钥" class="headerlink" title="1.在本地机器创建公钥"></a>1.在本地机器创建公钥</h1><h3 id="ssh-keygen-t-rsa-C-‘your-email-domain-com’"><a href="#ssh-keygen-t-rsa-C-‘your-email-domain-com’" class="headerlink" title="$ ssh-keygen -t rsa -C  ‘your email@domain.com’"></a>$ ssh-keygen -t rsa -C  ‘your email@domain.com’</h3><p>-t 指定密钥类型，默认即 rsa ，可以省略<br>-C 设置注释文字，比如你的邮箱<br>之前配置过github的ssh,这个文件应该是生成过的，所以可以直接跳过这一步。</p>
+<h1 id="2-将公钥复制到ssh服务器"><a href="#2-将公钥复制到ssh服务器" class="headerlink" title="2. 将公钥复制到ssh服务器"></a>2. 将公钥复制到ssh服务器</h1><h3 id="ssh-copy-id-dev-neomedia-top"><a href="#ssh-copy-id-dev-neomedia-top" class="headerlink" title="$ ssh-copy-id dev@neomedia.top"></a>$ ssh-copy-id dev@neomedia.top</h3><p><img src="/img/ssh/1.png" alt="公钥复制到服务器"><br><a href="http://man.linuxde.net/ssh-copy-id" target="_blank" rel="external">ssh-copy-id</a>命令可以把本地主机的公钥复制到远程主机的authorized_keys文件上，ssh-copy-id命令也会给远程主机的用户主目录（home）和~/.ssh, 和~/.ssh/authorized_keys设置合适的权限。<br>如果成功的话，可以尝试，下面这条命令，不需要输入密码即可链接阿里云服务器</p>
+<h3 id="ssh-dev-neomedia-top"><a href="#ssh-dev-neomedia-top" class="headerlink" title="$ ssh dev@neomedia.top"></a>$ ssh dev@neomedia.top</h3><p><img src="/img/ssh/2.png" alt="链接服务器"></p>
+<h1 id="3-快捷登录"><a href="#3-快捷登录" class="headerlink" title="3. 快捷登录"></a>3. 快捷登录</h1><p>完成以上步骤后，即可使用以下命令直接登录ssh服务器，再也不用担心你记不住密码了</p>
+<h3 id="vim-ssh-config"><a href="#vim-ssh-config" class="headerlink" title="$ vim ~/.ssh/config"></a>$ vim ~/.ssh/config</h3><p><img src="/img/ssh/3.png" alt="打开编辑配置文件"><br>添加下面内容<br><img src="/img/ssh/4.png" alt="为config文件添加内容"></p>
+<h1 id="4-尝试登录"><a href="#4-尝试登录" class="headerlink" title="4.尝试登录"></a>4.尝试登录</h1><h3 id="ssh-neomedia"><a href="#ssh-neomedia" class="headerlink" title="$ ssh neomedia"></a>$ ssh neomedia</h3><p><img src="/img/ssh/5.png" alt="登录成功"></p>
+<h1 id="5-ssh-copy-id使用非默认22端口"><a href="#5-ssh-copy-id使用非默认22端口" class="headerlink" title="5.ssh-copy-id使用非默认22端口"></a>5.ssh-copy-id使用非默认22端口</h1><p>连接实验室服务器是使用3333端口,第一步也是将密钥上传到服务器</p>
+<h3 id="ssh-copy-id-i-ssh-id-rsa-pub-p-3333-dev-neomedia-top"><a href="#ssh-copy-id-i-ssh-id-rsa-pub-p-3333-dev-neomedia-top" class="headerlink" title="$ ssh-copy-id -i ~/.ssh/id_rsa.pub -p 3333  dev@neomedia.top"></a>$ ssh-copy-id -i ~/.ssh/id_rsa.pub -p 3333  dev@neomedia.top</h3><p>然后测试一下是不是密钥传输成功</p>
+<h3 id="ssh-p-3333-dev-neomedia-top"><a href="#ssh-p-3333-dev-neomedia-top" class="headerlink" title="$ ssh -p 3333 dev@neomedia.top"></a>$ ssh -p 3333 dev@neomedia.top</h3><p><img src="/img/ssh/6.png" alt="登录成功"><br>设置快捷登录，修改config配置文件</p>
+<h3 id="vim-ssh-config-1"><a href="#vim-ssh-config-1" class="headerlink" title="$ vim ~/.ssh/config"></a>$ vim ~/.ssh/config</h3><p><img src="/img/ssh/7.png" alt="为config文件添加内容"><br>尝试登录</p>
+<h3 id="ssh-dev"><a href="#ssh-dev" class="headerlink" title="$ ssh dev"></a>$ ssh dev</h3><p><img src="/img/ssh/8.png" alt="登录成功"></p>
+<h1 id="6-备注"><a href="#6-备注" class="headerlink" title="6.备注"></a>6.备注</h1><ul>
+<li>1.每次尝试登录后不要忘记exit退回到当前主机再进行下一步操作。（如果忘记当前终端在哪台服务器上可以利用ifconfig查看一下ip地址）</li>
+<li>2.config文件内容方便大家复制。<br>Host neomedia<br>  HostName neomedia.top<br>  PreferredAuthentications publickey<br>  IdentityFile ~/.ssh/id_rsa<br>  User dev<br>Host dev<br>  HostName neomedia.top<br>  PreferredAuthentications publickey<br>  IdentityFile ~/.ssh/id_rsa<br>  Port 3333<br>  User dev</li>
+<li>3.帐户名和密码见印象笔记。</li>
+</ul>
+
+            </div>
+        </div>
+    </article>
+
+    
+    
+<nav class="article-nav">
+  
+    <a href="/2016/04/25/20160425RequirementDocument/" id="article-nav-newer" class="article-nav-link-wrap prev">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          在线媒体编辑需求文档
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/04/24/20160425MeetingSummary/" id="article-nav-older" class="article-nav-link-wrap next">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">2015-2016下学期第五次例会总结</div>
+    </a>
+  
+</nav>
+
+    
+
+    
+</div>
+    </div>
+    <footer class="site-footer">
+        <div class="global-width">
+            <ul class="site-widget">
+                
+                <li class="widget widget-tag">
+                    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget-body">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux-Pro/">Linux Pro</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/LinuxServer/">LinuxServer</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MUST-READ/">MUST-READ</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Qiuzihe/">Qiuzihe</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/RequirementDocument/">RequirementDocument</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/architecture/">architecture</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/fusizhe/">fusizhe</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git-pro/">git pro</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/management/">management</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/markdown/">markdown</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nodejs/">nodejs</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/presentation/">presentation</a><span class="tag-list-count">15</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/qiuzihe/">qiuzihe</a><span class="tag-list-count">10</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ssh/">ssh</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/task/">task</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tuto/">tuto</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/uml/">uml</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/use-guide/">use guide</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/webtestresult-qiuzihe/">webtestresult qiuzihe</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/weekly/">weekly</a><span class="tag-list-count">20</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/zengyan/">zengyan</a><span class="tag-list-count">6</span></li></ul>
+    </div>
+  </div>
+
+                </li>
+                
+                <li class="widget widget-category">
+                    
+                </li>
+                
+                <li class="widget widget-recent_posts">
+                    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget-body">
+      <ul>
+        
+          <li>
+            <a href="/2016/05/29/20160529Qzh/">仇紫荷个人学习总结</a>
+          </li>
+        
+          <li>
+            <a href="/2016/05/22/20160522MeetingSummary/">2015-2016下学期第八次例会总结</a>
+          </li>
+        
+          <li>
+            <a href="/2016/05/17/20160516MeetringSummary/">2015-2016下学期第七次例会总结</a>
+          </li>
+        
+          <li>
+            <a href="/2016/05/09/20160508MeetingSummary/">2015-2016下学期第六次例会总结</a>
+          </li>
+        
+          <li>
+            <a href="/2016/05/08/20160508WeeklyMeeting/">20160508周例会</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+                </li>
+                
+            </ul>
+        </div>
+        <div class="site-info">
+            <address>
+                &copy; 2014 <a href="http://team.neomedia.top">CUC-IMC攻城狮</a> All Right Reserved. <br/>
+                Powered by <a href="http://hexo.io">Hexo</a>. Theme by <a href="http://zzoman.com">ZZOMAN</a> <br/>
+                方糖维护<a href="mailto:mengyu.dev@outlook.com?Subject=neomedia" target="_top">，联系 Send mail</a>
+            </address>
+        </div>
+    </footer>
+    
+    <script src="/libs/jquery-1.11.3.min.js" type="text/javascript"></script>
+    
+    <script src="/libs/fancybox/jquery.fancybox.js" type="text/javascript"></script>
+    
+    <script src="/js/site_init.js" type="text/javascript"></script>
+</body>
+</html>

@@ -1,0 +1,358 @@
+
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Git学习总结</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="/libs/reveal/css/reveal.css">
+		<link rel="stylesheet" href="/libs/reveal/css/theme/blood.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="/libs/reveal/lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? '/libs/reveal/css/print/pdf.css' : '/libs/reveal/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="/libs/reveal/lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				
+<section>
+    <h1>新媒体项目会议</h1>
+    <h3>Git学习总结</h3>
+    <p>
+        <small>2015年10月25日</small>
+    </p>
+</section>
+<section>
+    <h3>Git学习总结</h3>
+    <li>Git基础</li>
+    <li>为什么要使用Git</li>
+    <li>Git的配置</li>
+    <li>Git的初始化新仓库</li>
+    <li>Git的跟踪文件</li>
+    <li>Git的比较</li>
+    <li>Git的提交更新</li>
+    <li>Git的移除文件</li>
+    <li>Git的查看提交历史</li>
+    <li>Git的远程仓库</li>
+    <li>Git的分支</li>
+
+</section>
+<section>
+    <section>
+        <h2>什么是Git？</h2>
+        <li class="fragment">新一代版本控制系统</li>
+    </section>
+    <section>
+        <ul>
+            <h2>Git简史</h2>
+            <li>Linux内核开源项目有着为数众多的参与者。一开始整个项目组Bitkeeper来管理和维护代码。2005年，BitKeeper不再能免费使用，这就迫使Linux开源社区开发一套属于自己的版本控制系统。</li>
+            <li>自诞生于2005年以来，Git日臻成熟完善，它的速度飞快，及其适合管理大项目，它还有着令人难以置信的非线性分支管理系统，可以应付复杂的项目开发需求。</li>
+        </ul>
+    </section>
+</section>
+
+<section>
+	<ul>
+        <h2>Git基础</h2>
+            <li class="fragment">直接记录快照，而非差异比较。</li>
+            <li class="fragment">近乎所有操作都是本地执行。</li>
+            <li class="fragment">时刻保持数据完整性。</li>
+            <li class="fragment">多数操作仅添加数据。</li>
+	    <li class="fragment">文件的三种状态-已修改（modified）、已暂存（staged）和已提交（committed）。</li>
+	</ul>
+</section>
+<section>
+        <ul>
+        <h2>为什么要使用Git</h2>
+	    <li class="fragment">本地建立版本库。</li>
+	    <li class="fragment">本地版本控制。</li>
+	    <li class="fragment">多主机异地协同工作。</li>
+	    <li class="fragment">重写提交说明。</li>
+	    <li class="fragment">更好的差异比较。</li>
+	    <li class="fragment">更完善的分支系统。</li>
+	    <li class="fragment">速度快。</li>
+	    <li class="fragment">代理SVN提交实现移动式办公。</li>
+        </ul>
+</section>
+<section>
+	<section>
+	<ul>
+        <h2>Git的配置</h2>
+            <li>查看版本</li>
+            <p>$ git --version</p>
+            <img data-src="/img/version.png">
+            <li>配置</li>
+            <p>$ git config --global user.name”Qzhehe”</p>
+	    <p>$ git config --global user.email htszdm@hotmail.com</p>
+            <li>查看配置信息</li>
+            <p>$ git config –list</p>
+            <img data-src="/img/config.png">
+	</ul>
+	</section>
+	<section>
+	<ul>
+        <h2>Git的配置</h2>
+            <li>获取帮助</li>
+            <p>$ git help config</p>
+            <p>$ git config –help</p>
+	</ul>
+	</section>
+</section>
+<section>
+	<section>
+	<ul>
+        <h2>Git的初始化新仓库</h2>
+            <li>在工作目录中初始化新仓库</li>
+            <p>$ git init</p>
+            <img data-src="/img/init.png">
+	</ul>
+	</section>
+	<section>
+	<ul>
+        <h2>Git的初始化新仓库</h2>
+            <li>从现有仓库克隆，克隆完整数据</li>
+            <p>$ git clone git@github.com:CUC-DEV/cuc-dev.github.io.git</p>
+            <img data-src="/img/clone.png">
+        </ul>
+	</section>
+	<section>
+	<ul>
+        <h2>Git的初始化新仓库</h2>
+            <li>检查当前文件状态</li>
+            <p>$ git status</p>
+            <img data-src="/img/status.png">
+	</ul>
+	</section>
+</section>
+<section>
+	<section>
+	<ul>
+        <h2>Git的跟踪文件</h2>
+            <li>跟踪新文件</li>
+            <p>$ git add *.c</p>
+            <li>将文件添加到暂缓区，每次修改之后都需要将文件放到暂缓区去</li>
+            <p>$ git add *.c</p>
+            <img data-src="/img/add.png">
+        </ul>
+	</section>
+</section>
+<section>
+	<section>
+	<ul>
+        <h2>Git的比较</h2>
+            <li>查看暂存区文件和上次提交的快照之间的差异</li>
+            <p>$ git diff –cached</p>
+            <img data-src="/img/cached.png">
+            <img data-src="/img/cached2.png">
+        </ul>
+	</section>
+</section>
+<section>
+	<section>
+	<ul>
+        <h2>Git的提交更新</h2>
+            <li>提交更新，每次准备提交前，先用 git status 看下，是不是都已经暂存起来了，然后再运行提交命令</li>
+            <img data-src="/img/status2.png">
+            <p>$ git commit</p>
+            <img data-src="/img/commit.png">
+        </ul>
+	</section>
+	<section>
+	<ul>
+        <h2>Git的提交更新</h2>
+            <p>$ git commit</p>
+            <p>$ git commit –m  ‘test’</p>
+            <img data-src="/img/commit-m.png">
+        </ul>
+	</section>
+</section>
+<section>
+	<section>
+	<ul>
+        <h2>Git的移除文件</h2>
+            <li>移除文件</li>
+            <p>$ git rm test.js</p>
+            <img data-src="/img/rm.png">
+        </ul>
+	</section>
+	<section>
+	<ul>
+        <h2>Git的移除文件</h2>
+            <li>仅仅从缓存区移除</li>
+            <p>$ git reset test.js</p>
+            <img data-src="/img/reset.png">
+        </ul>
+	</section>
+</section>
+<section>
+	<section>
+	<ul>
+        <h2>Git的查看提交历史</h2>
+            <li>查看提交历史</li>
+            <p>$ git log</p>
+            <p>-p 展开显示每次提交的内容差异</p>
+            <p>-n 则仅仅显示最近的n此更新</p>
+            <img data-src="/img/log.png">
+        </ul>
+	</section>
+</section>
+<section>
+	<section>
+	<ul>
+        <h2>Git的远程仓库</h2>
+            <li>查看当前的远程库</li>
+            <p>$ git remote</p>
+            <img data-src="/img/remote.png">
+            <li>显示对应的克隆地址（origin为默认的远程库名称）</li>
+            <p>$ git remote –v</p>
+            <img data-src="/img/remote-v.png">
+        </ul>
+	</section>
+	<section>
+	<ul>
+        <h2>Git的远程仓库</h2>
+            <li>推送数据到远程仓库</li>
+            <p>$ git push origin master</p>
+            <img data-src="/img/push.png">
+        </ul>
+	</section>
+	<section>
+	<ul>
+        <h2>Git的远程仓库</h2>
+            <li>查看远程仓库信息</li>
+            <p>$ git remote show origin</p>
+            <img data-src="/img/remoteshow.png">
+        </ul>
+	</section>
+</section>
+<section>
+	<section>
+	<ul>
+        <h2>Git的分支</h2>
+            <li>创建分支</li>
+            <p>$ git branch testing</p>
+            <img data-src="/img/branch.png">
+        </ul>
+	</section>
+	<section>
+	<ul>
+        <h2>Git的分支</h2>
+            <li>切换到分支</li>
+            <p>$ git checkout master</p>
+            <img data-src="/img/checkout.png">
+        </ul>
+	</section>
+	<section>
+	<ul>
+        <h2>Git的分支</h2>
+            <li>创建并切换到分支</li>
+            <p>$ git checkout –b testing</p>
+            <img data-src="/img/checkout-b.png">
+        </ul>
+	</section>
+	<section>
+	<ul>
+        <h2>Git的分支</h2>
+            <li>与当前分支合并</li>
+            <p>$ git merge testing</p>
+            <li>删除分支</li>
+            <p>$ git branch –d testing</p>
+            <li>查看分支</li>
+            <p>$ git branch</p>
+            <img data-src="/img/branch2.png">
+        </ul>
+	</section>
+	<section>
+	<ul>
+        <h2>Git的分支</h2>
+            <li>查看分支最后一次提交的信息</li>
+            <p>$ git branch –v</p>
+            <img data-src="/img/branch-v.png">
+            <li>查看已经合并|尚未合并的分支</li>
+            <p>$ git branch --merged|no-merged0</p>
+            <img data-src="/img/merge.png">`
+        </ul>
+	</section>
+	<section>
+	<ul>
+        <h2>Git的分支</h2>
+            <li>推送本地分支</li>
+            <p>$ git push origin qiuzihe</p>
+            <li>推送本地分支A为origin的B分支</li>
+            <p>$ git push origin A:B</p>
+        </ul>
+	</section>
+
+</section>
+<section>
+    <h3>End</h3>
+</section>
+
+
+
+
+
+  
+    
+
+			</div>
+
+		</div>
+
+		<script src="/libs/reveal/lib/js/head.min.js"></script>
+		<script src="/libs/reveal/js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: '/libs/reveal/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: '/libs/reveal/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '/libs/reveal/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '/libs/reveal/plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: '/libs/reveal/plugin/zoom-js/zoom.js', async: true },
+					{ src: '/libs/reveal/plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
+

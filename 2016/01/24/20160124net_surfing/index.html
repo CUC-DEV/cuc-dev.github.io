@@ -1,0 +1,199 @@
+
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    
+    <title>科学上网流程介绍 | CUC-IMC攻城狮</title>
+    
+    <link rel="alternative" href="/atom.xml" title="CUC-IMC攻城狮" type="application/atom+xml">
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+    <link rel="stylesheet" href="/libs/fancybox/jquery.fancybox.css" charset="utf-8">
+    
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body class="site">
+    <header class="site-header">
+        <h1 class="site-title"><a href="/">CUC-IMC攻城狮</a></h1>
+        <nav class="site-nav">
+            <ul class="nav">
+                
+                <li><a href="/archives">Archives</a></li>
+                
+                
+                <li><a href="/atom.xml" title="RSS Feed">rss</a></li>
+                
+                <li><a class="toggle-search" href="#search">search</a></li>
+            </ul>
+        </nav>
+        <div class="site-search" id="search">
+            <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><input type="hidden" name="sitesearch" value="http://team.neomedia.top"></form>
+        </div>
+        
+            <div class="site-header-background" style="background-image:url(http://reumia.github.io/hexo-theme-zzoman2015/images/background-zzoman2015.jpg)"></div>
+        
+    </header>
+    <div class="site-body">
+        <div class="global-width">
+    <article class="article" data-layout="post" data-slug="20160124net_surfing">
+        <div class="article-content">
+            
+            
+            <header class="article-header">
+                <div class="article-meta">
+                    <a href="/2016/01/24/20160124net_surfing/" class="article-date">
+  <time datetime="2016-01-24T01:30:43.000Z">2016-01-24</time>
+</a>
+                    
+                    
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/task/">task</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tuto/">tuto</a></li></ul>
+
+                </div>
+                
+    <h1 class="article-title" itemprop="name">
+      <a href="/2016/01/24/20160124net_surfing/">科学上网流程介绍</a>
+    </h1>
+
+            </header>
+            
+            <div class="article-body">
+                <p><img src="/img/net_surfing/surfing.jpg" alt="科学上网"></p>
+<blockquote>
+<p>科学上网有助于大家学习，在这里介绍设置流程，望大家合理利用</p>
+</blockquote>
+<h1 id="前期准备"><a href="#前期准备" class="headerlink" title="前期准备"></a>前期准备</h1><p>首先你需要为电脑安装谷歌浏览器，然后下载简聊“分享”的两个文件：publickey.crt（证书）、SwitchyOmega.crx（谷歌浏览器的一个插件）。</p>
+<h1 id="配置过程"><a href="#配置过程" class="headerlink" title="配置过程"></a>配置过程</h1><ul>
+<li>将证书（publickey.crt）添加信任 <a href="http://cnzhx.net/blog/self-signed-certificate-as-trusted-root-ca-in-windows/" target="_blank" rel="external">参考教程</a><ul>
+<li>双击publickey.crt文件</li>
+<li>点击安装证书</li>
+<li>选择将所有的证书放入下列存储，点击浏览</li>
+<li>选择受信任的根证书颁发机构，点击确定<br><img src="/img/net_surfing/crt.jpg" alt=""></li>
+</ul>
+</li>
+<li>设置谷歌浏览器证书<ul>
+<li>在“设置”中点击“显示高级设置”</li>
+<li>点击“管理证书”<br><img src="/img/net_surfing/setting1.png" alt=""></li>
+<li>选择“受信任的根证书颁发机构”选项卡，点击“导入”，并选择publickey.crt文件所在路径<br><img src="/img/net_surfing/setting2.png" alt=""></li>
+<li>导入成功后可以看到“neomedia.top”<br><img src="/img/net_surfing/setting3.png" alt=""></li>
+</ul>
+</li>
+<li>为谷歌浏览器添加插件<ul>
+<li>将SwitchyOmega.crx文件直接拖入扩展程序即可安装<br><img src="/img/net_surfing/setting4.png" alt=""></li>
+</ul>
+</li>
+<li>设置SwitchyOmega<ul>
+<li>点击上图中标注的红色位置“选项”</li>
+<li>点击左侧边栏中的proxy，按照图片中填写，点击“应用选项”<br><img src="/img/net_surfing/setting5.png" alt=""></li>
+<li>浏览器上谷歌的官网，输入用户名和密码，地址栏右边会多一个圈圈，点击圈圈，鼠标悬停在“proxy”上会出现“HTTPS neomedia.top：4128”<br><img src="/img/net_surfing/setting6.png" alt=""> </li>
+<li>在搜索栏搜索“where is my ip”可以看到如下<br><img src="/img/net_surfing/setting7.png" alt=""><h1 id="补充说明"><a href="#补充说明" class="headerlink" title="补充说明"></a>补充说明</h1>此方法主要目的是方便大家查阅资料，不是很适合看视频，会很慢，当浏览过内网站的时候可以讲代理关闭，用户名和密码在简聊里找，希望大家合理利用~~~</li>
+</ul>
+</li>
+</ul>
+
+            </div>
+        </div>
+    </article>
+
+    
+    
+<nav class="article-nav">
+  
+    <a href="/2016/01/24/20160124linux/" id="article-nav-newer" class="article-nav-link-wrap prev">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Linux环境配置
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/01/16/20160116YearEndSummaryMeeting/" id="article-nav-older" class="article-nav-link-wrap next">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">第九次项目例会</div>
+    </a>
+  
+</nav>
+
+    
+
+    
+</div>
+    </div>
+    <footer class="site-footer">
+        <div class="global-width">
+            <ul class="site-widget">
+                
+                <li class="widget widget-tag">
+                    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget-body">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux-Pro/">Linux Pro</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/LinuxServer/">LinuxServer</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MUST-READ/">MUST-READ</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Qiuzihe/">Qiuzihe</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/RequirementDocument/">RequirementDocument</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/architecture/">architecture</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/fusizhe/">fusizhe</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git-pro/">git pro</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/management/">management</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/markdown/">markdown</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nodejs/">nodejs</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/presentation/">presentation</a><span class="tag-list-count">15</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/qiuzihe/">qiuzihe</a><span class="tag-list-count">10</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ssh/">ssh</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/task/">task</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tuto/">tuto</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/uml/">uml</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/use-guide/">use guide</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/webtestresult-qiuzihe/">webtestresult qiuzihe</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/weekly/">weekly</a><span class="tag-list-count">20</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/zengyan/">zengyan</a><span class="tag-list-count">6</span></li></ul>
+    </div>
+  </div>
+
+                </li>
+                
+                <li class="widget widget-category">
+                    
+                </li>
+                
+                <li class="widget widget-recent_posts">
+                    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget-body">
+      <ul>
+        
+          <li>
+            <a href="/2016/05/29/20160529Qzh/">仇紫荷个人学习总结</a>
+          </li>
+        
+          <li>
+            <a href="/2016/05/22/20160522MeetingSummary/">2015-2016下学期第八次例会总结</a>
+          </li>
+        
+          <li>
+            <a href="/2016/05/17/20160516MeetringSummary/">2015-2016下学期第七次例会总结</a>
+          </li>
+        
+          <li>
+            <a href="/2016/05/09/20160508MeetingSummary/">2015-2016下学期第六次例会总结</a>
+          </li>
+        
+          <li>
+            <a href="/2016/05/08/20160508WeeklyMeeting/">20160508周例会</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+                </li>
+                
+            </ul>
+        </div>
+        <div class="site-info">
+            <address>
+                &copy; 2014 <a href="http://team.neomedia.top">CUC-IMC攻城狮</a> All Right Reserved. <br/>
+                Powered by <a href="http://hexo.io">Hexo</a>. Theme by <a href="http://zzoman.com">ZZOMAN</a> <br/>
+                方糖维护<a href="mailto:mengyu.dev@outlook.com?Subject=neomedia" target="_top">，联系 Send mail</a>
+            </address>
+        </div>
+    </footer>
+    
+    <script src="/libs/jquery-1.11.3.min.js" type="text/javascript"></script>
+    
+    <script src="/libs/fancybox/jquery.fancybox.js" type="text/javascript"></script>
+    
+    <script src="/js/site_init.js" type="text/javascript"></script>
+</body>
+</html>

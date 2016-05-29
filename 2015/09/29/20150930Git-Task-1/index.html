@@ -1,0 +1,191 @@
+
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    
+    <title>Git 任务（1） | CUC-IMC攻城狮</title>
+    
+    <link rel="alternative" href="/atom.xml" title="CUC-IMC攻城狮" type="application/atom+xml">
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+    <link rel="stylesheet" href="/libs/fancybox/jquery.fancybox.css" charset="utf-8">
+    
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body class="site">
+    <header class="site-header">
+        <h1 class="site-title"><a href="/">CUC-IMC攻城狮</a></h1>
+        <nav class="site-nav">
+            <ul class="nav">
+                
+                <li><a href="/archives">Archives</a></li>
+                
+                
+                <li><a href="/atom.xml" title="RSS Feed">rss</a></li>
+                
+                <li><a class="toggle-search" href="#search">search</a></li>
+            </ul>
+        </nav>
+        <div class="site-search" id="search">
+            <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><input type="hidden" name="sitesearch" value="http://team.neomedia.top"></form>
+        </div>
+        
+            <div class="site-header-background" style="background-image:url(http://reumia.github.io/hexo-theme-zzoman2015/images/background-zzoman2015.jpg)"></div>
+        
+    </header>
+    <div class="site-body">
+        <div class="global-width">
+    <article class="article" data-layout="post" data-slug="20150930Git-Task-1">
+        <div class="article-content">
+            
+            
+            <header class="article-header">
+                <div class="article-meta">
+                    <a href="/2015/09/29/20150930Git-Task-1/" class="article-date">
+  <time datetime="2015-09-29T12:53:35.000Z">2015-09-29</time>
+</a>
+                    
+                    
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/task/">task</a></li></ul>
+
+                </div>
+                
+    <h1 class="article-title" itemprop="name">
+      <a href="/2015/09/29/20150930Git-Task-1/">Git 任务（1）</a>
+    </h1>
+
+            </header>
+            
+            <div class="article-body">
+                <p><img src="/img/git-t-shirt.png" alt="Git"> </p>
+<h1 id="Git简单介绍"><a href="#Git简单介绍" class="headerlink" title="Git简单介绍"></a>Git简单介绍</h1><blockquote><p>Git是一款免费、开源的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目</p>
+</blockquote>
+<h1 id="任务描述"><a href="#任务描述" class="headerlink" title="任务描述"></a>任务描述</h1><p>掌握基本的git命令，熟悉git的使用方式。</p>
+<ol>
+<li>每人以自己jira账户为名称创建一个分支并提交到仓库;</li>
+<li>在此分支上，添加一个txt文件;</li>
+<li>在此txt文件内，添加自己的名字，邮箱和熟悉的语言;</li>
+<li>把此文件的内容，翻译为英文添加到文件尾部;</li>
+</ol>
+<h1 id="简单解答"><a href="#简单解答" class="headerlink" title="简单解答"></a>简单解答</h1><p>首先我们要克隆此项目，并在此项目上完成任务。克隆的基本命令是<code>git clone repo-url</code>. 在github上提供了三种不同格式的项目地址，分别是：https，ssh，subversion。一般来说我们选择ssh，更高效和更安全。<br>这样，运行<code>git clone git@github.com:CUC-DEV/training.git</code>就可以把项目克隆到本地进行开发。</p>
+<ol>
+<li>创建分支的基本命令是<code>git branch branch-name</code>. 然后我们切换到此分支进行代码开发<code>git checkout branch-name</code>。或者我们直接键入<code>git checkout -b branch-name</code>。此行命令会完成2个行为：创建分支并切换到次分支。最后我们推送此分支到代码仓库<code>git push origin branch-name</code>。</li>
+<li>添加一个文件可以使用基本的linux命令<code>touch task.txt</code>，如果基于windows，则为<code>type NUL &gt; task.txt</code>。然后我们需要添加此文件到git系统<code>git add task.txt</code>。最后我们保存我们的修改，生成此次提交<code>git commit -m &#39;add task.txt&#39;</code>。</li>
+<li>编辑task.txt文件，保存此次修改并提交<code>git add task.txt</code>和<code>git commit -m &#39;write basic info in task.txt&#39;</code></li>
+<li>继续编辑此文件，保存此次修改并提交<code>git add task.txt</code>和<code>git commit -m &#39;translate basic info in english and write it in the end of file task.txt&#39;</code></li>
+<li>推送此分支的所有开发<code>git push origin branch-name</code>。</li>
+</ol>
+<p>这个任务很简单，但是模拟了基本的开发流程（基于此程序员的视角）。对于一般的开发，我们在主分支上创建一个特性分支(feature branch)避免打扰其他程序的工作。然后基于此分支，进行开发工作。每日有规律的保存自己的工作并提交到本地。最后待所有功能开发完成，推送此分支。还有隐藏的一步，项目负责人审核并合并分支到主分支。</p>
+<h1 id="思考"><a href="#思考" class="headerlink" title="思考"></a>思考</h1><ul>
+<li>为什么选用ssh格式的项目地址</li>
+<li>git add 与 git commit的区别</li>
+<li>为什么要基于分支开发</li>
+</ul>
+<h1 id="阅读资料"><a href="#阅读资料" class="headerlink" title="阅读资料"></a>阅读资料</h1><ul>
+<li><a href="https://git-scm.com/book/zh/v2" target="_blank" rel="external">开源的git教程</a></li>
+<li><a href="http://backlogtool.com/git-guide/cn/" target="_blank" rel="external">猴子都能懂的git入门</a></li>
+<li><a href="http://www.imooc.com/learn/208" target="_blank" rel="external">慕课网教程</a></li>
+</ul>
+
+            </div>
+        </div>
+    </article>
+
+    
+    
+<nav class="article-nav">
+  
+    <a href="/2015/09/30/20150930Markdown-Task/" id="article-nav-newer" class="article-nav-link-wrap prev">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Markdown
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
+    
+
+    
+</div>
+    </div>
+    <footer class="site-footer">
+        <div class="global-width">
+            <ul class="site-widget">
+                
+                <li class="widget widget-tag">
+                    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget-body">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux-Pro/">Linux Pro</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/LinuxServer/">LinuxServer</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MUST-READ/">MUST-READ</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Qiuzihe/">Qiuzihe</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/RequirementDocument/">RequirementDocument</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/architecture/">architecture</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/fusizhe/">fusizhe</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git-pro/">git pro</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/management/">management</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/markdown/">markdown</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nodejs/">nodejs</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/presentation/">presentation</a><span class="tag-list-count">15</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/qiuzihe/">qiuzihe</a><span class="tag-list-count">10</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ssh/">ssh</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/task/">task</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tuto/">tuto</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/uml/">uml</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/use-guide/">use guide</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/webtestresult-qiuzihe/">webtestresult qiuzihe</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/weekly/">weekly</a><span class="tag-list-count">20</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/zengyan/">zengyan</a><span class="tag-list-count">6</span></li></ul>
+    </div>
+  </div>
+
+                </li>
+                
+                <li class="widget widget-category">
+                    
+                </li>
+                
+                <li class="widget widget-recent_posts">
+                    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget-body">
+      <ul>
+        
+          <li>
+            <a href="/2016/05/29/20160529Qzh/">仇紫荷个人学习总结</a>
+          </li>
+        
+          <li>
+            <a href="/2016/05/22/20160522MeetingSummary/">2015-2016下学期第八次例会总结</a>
+          </li>
+        
+          <li>
+            <a href="/2016/05/17/20160516MeetringSummary/">2015-2016下学期第七次例会总结</a>
+          </li>
+        
+          <li>
+            <a href="/2016/05/09/20160508MeetingSummary/">2015-2016下学期第六次例会总结</a>
+          </li>
+        
+          <li>
+            <a href="/2016/05/08/20160508WeeklyMeeting/">20160508周例会</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+                </li>
+                
+            </ul>
+        </div>
+        <div class="site-info">
+            <address>
+                &copy; 2014 <a href="http://team.neomedia.top">CUC-IMC攻城狮</a> All Right Reserved. <br/>
+                Powered by <a href="http://hexo.io">Hexo</a>. Theme by <a href="http://zzoman.com">ZZOMAN</a> <br/>
+                方糖维护<a href="mailto:mengyu.dev@outlook.com?Subject=neomedia" target="_top">，联系 Send mail</a>
+            </address>
+        </div>
+    </footer>
+    
+    <script src="/libs/jquery-1.11.3.min.js" type="text/javascript"></script>
+    
+    <script src="/libs/fancybox/jquery.fancybox.js" type="text/javascript"></script>
+    
+    <script src="/js/site_init.js" type="text/javascript"></script>
+</body>
+</html>

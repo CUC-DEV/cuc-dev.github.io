@@ -1,0 +1,240 @@
+
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    
+    <title>hexostudy4:Hexo博客的配置和使用 | CUC-IMC攻城狮</title>
+    
+    <link rel="alternative" href="/atom.xml" title="CUC-IMC攻城狮" type="application/atom+xml">
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+    <link rel="stylesheet" href="/libs/fancybox/jquery.fancybox.css" charset="utf-8">
+    
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body class="site">
+    <header class="site-header">
+        <h1 class="site-title"><a href="/">CUC-IMC攻城狮</a></h1>
+        <nav class="site-nav">
+            <ul class="nav">
+                
+                <li><a href="/archives">Archives</a></li>
+                
+                
+                <li><a href="/atom.xml" title="RSS Feed">rss</a></li>
+                
+                <li><a class="toggle-search" href="#search">search</a></li>
+            </ul>
+        </nav>
+        <div class="site-search" id="search">
+            <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><input type="hidden" name="sitesearch" value="http://team.neomedia.top"></form>
+        </div>
+        
+            <div class="site-header-background" style="background-image:url(http://reumia.github.io/hexo-theme-zzoman2015/images/background-zzoman2015.jpg)"></div>
+        
+    </header>
+    <div class="site-body">
+        <div class="global-width">
+    <article class="article" data-layout="post" data-slug="20160227hexostudy4">
+        <div class="article-content">
+            
+            
+            <header class="article-header">
+                <div class="article-meta">
+                    <a href="/2016/02/27/20160227hexostudy4/" class="article-date">
+  <time datetime="2016-02-27T06:59:52.000Z">2016-02-27</time>
+</a>
+                    
+                    
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/zengyan/">zengyan</a></li></ul>
+
+                </div>
+                
+    <h1 class="article-title" itemprop="name">
+      <a href="/2016/02/27/20160227hexostudy4/">hexostudy4:Hexo博客的配置和使用</a>
+    </h1>
+
+            </header>
+            
+            <div class="article-body">
+                <p>在上一篇文章中，我们在本地和github搭建起了自己的hexo博客站点，但是还未发表过文章，站点的配置还是原来的默认值。<br>在本篇文章中，我们来进行个性化的设置，将站点打造成自己的，同时介绍下怎么撰文和发表。</p>
+<p>对整站的配置的文件为\zzzengyan.github.io_config.yml</p>
+<p>#Hexo博客的配置<br>_config.yml是全局的配置文件：很多的网站配置都在这个文件中定义.<br><img src="/img/hexo/4/1.png" alt="hexo博客的配置"><br>打开文件\zzzengyan.github.io_config.yml 进行配置</p>
+<ul>
+<li><h1 id="Hexo-Configuration-Docs-http-zespia-tw-hexo-docs-configure-html-Source-https-github-com-tommy351-hexo"><a href="#Hexo-Configuration-Docs-http-zespia-tw-hexo-docs-configure-html-Source-https-github-com-tommy351-hexo" class="headerlink" title="Hexo Configuration## Docs: http://zespia.tw/hexo/docs/configure.html## Source: https://github.com/tommy351/hexo/"></a>Hexo Configuration## Docs: <a href="http://zespia.tw/hexo/docs/configure.html##" target="_blank" rel="external">http://zespia.tw/hexo/docs/configure.html##</a> Source: <a href="https://github.com/tommy351/hexo/" target="_blank" rel="external">https://github.com/tommy351/hexo/</a></h1></li>
+<li><h1 id="Site"><a href="#Site" class="headerlink" title="Site"></a>Site</h1></li>
+<li>title:hexo #站点名，站点左上角</li>
+<li>subtitle: Walk steps step by step #副标题，站点左上角</li>
+<li>description: Walk steps step by step #给搜索引擎看的，对站点的描述，可以自定义</li>
+<li>author: #在站点左下角可以看到</li>
+<li>email: #你的联系邮箱</li>
+<li>language: zh-CN #</li>
+<li><h1 id="URL-这项暂不配置，绑定域名后，欲创建sitemap-xml需要配置该项-If-your-site-is-put-in-a-subdirectory-set-url-as-‘http-yoursite-com-child‘-and-root-as-‘-child-‘"><a href="#URL-这项暂不配置，绑定域名后，欲创建sitemap-xml需要配置该项-If-your-site-is-put-in-a-subdirectory-set-url-as-‘http-yoursite-com-child‘-and-root-as-‘-child-‘" class="headerlink" title="URL #这项暂不配置，绑定域名后，欲创建sitemap.xml需要配置该项## If your site is put in a subdirectory, set url as ‘http://yoursite.com/child‘ and root as ‘/child/‘"></a>URL #这项暂不配置，绑定域名后，欲创建sitemap.xml需要配置该项## If your site is put in a subdirectory, set url as ‘<a href="http://yoursite.com/child" target="_blank" rel="external">http://yoursite.com/child</a>‘ and root as ‘/child/‘</h1></li>
+<li>url: <a href="http://yoursite.com" target="_blank" rel="external">http://yoursite.com</a></li>
+<li>root: /</li>
+<li>permalink: :year/:month/:day/:title/</li>
+<li>tag_dir: tags</li>
+<li>archive_dir: archives</li>
+<li>category_dir: categories</li>
+<li><h1 id="Writing-文章布局、写作格式的定义，不修改"><a href="#Writing-文章布局、写作格式的定义，不修改" class="headerlink" title="Writing 文章布局、写作格式的定义，不修改"></a>Writing 文章布局、写作格式的定义，不修改</h1></li>
+<li>new_post_name: :title.md # File name of new posts</li>
+<li>default_layout: post</li>
+<li>auto_spacing: false # Add spaces between asian characters and western characters</li>
+<li>titlecase: false # Transform title into titlecase</li>
+<li>max_open_file: 100</li>
+<li>filename_case: 0</li>
+<li>highlight:</li>
+<li>enable: true</li>
+<li>backtick_code_block: true</li>
+<li>line_number: true</li>
+<li>tab_replace:</li>
+<li><h1 id="Category-amp-Tag"><a href="#Category-amp-Tag" class="headerlink" title="Category &amp; Tag"></a>Category &amp; Tag</h1></li>
+<li>default_category: uncategorized</li>
+<li>category_map:</li>
+<li>tag_map:</li>
+<li><h1 id="Archives-默认值为2，这里都修改为1，相应页面就只会列出标题，而非全文-2-Enable-pagination-1-Disable-pagination-0-Fully-Disable"><a href="#Archives-默认值为2，这里都修改为1，相应页面就只会列出标题，而非全文-2-Enable-pagination-1-Disable-pagination-0-Fully-Disable" class="headerlink" title="Archives 默认值为2，这里都修改为1，相应页面就只会列出标题，而非全文## 2: Enable pagination## 1: Disable pagination## 0: Fully Disable"></a>Archives 默认值为2，这里都修改为1，相应页面就只会列出标题，而非全文## 2: Enable pagination## 1: Disable pagination## 0: Fully Disable</h1></li>
+<li>archive: 1</li>
+<li>category: 1</li>
+<li>tag: 1</li>
+<li><h1 id="Server-不修改-Hexo-uses-Connect-as-a-server-You-can-customize-the-logger-format-as-defined-in-http-www-senchalabs-org-connect-logger-html"><a href="#Server-不修改-Hexo-uses-Connect-as-a-server-You-can-customize-the-logger-format-as-defined-in-http-www-senchalabs-org-connect-logger-html" class="headerlink" title="Server 不修改## Hexo uses Connect as a server## You can customize the logger format as defined in## http://www.senchalabs.org/connect/logger.html"></a>Server 不修改## Hexo uses Connect as a server## You can customize the logger format as defined in## <a href="http://www.senchalabs.org/connect/logger.html" target="_blank" rel="external">http://www.senchalabs.org/connect/logger.html</a></h1></li>
+<li>port: 4000</li>
+<li>logger: false</li>
+<li>logger_format:</li>
+<li><h1 id="Date-Time-format-日期格式，不修改-Hexo-uses-Moment-js-to-parse-and-display-date-You-can-customize-the-date-format-as-defined-in-http-momentjs-com-docs-displaying-format"><a href="#Date-Time-format-日期格式，不修改-Hexo-uses-Moment-js-to-parse-and-display-date-You-can-customize-the-date-format-as-defined-in-http-momentjs-com-docs-displaying-format" class="headerlink" title="Date / Time format 日期格式，不修改## Hexo uses Moment.js to parse and display date## You can customize the date format as defined in## http://momentjs.com/docs/#/displaying/format/"></a>Date / Time format 日期格式，不修改## Hexo uses Moment.js to parse and display date## You can customize the date format as defined in## <a href="http://momentjs.com/docs/#/displaying/format/" target="_blank" rel="external">http://momentjs.com/docs/#/displaying/format/</a></h1></li>
+<li>date_format: MMM D YYYY</li>
+<li>time_format: H:mm:ss</li>
+<li><h1 id="Pagination-每页显示文章数，可以自定义，我将10改成了5-Set-per-page-to-0-to-disable-pagination"><a href="#Pagination-每页显示文章数，可以自定义，我将10改成了5-Set-per-page-to-0-to-disable-pagination" class="headerlink" title="Pagination 每页显示文章数，可以自定义，我将10改成了5## Set per_page to 0 to disable pagination"></a>Pagination 每页显示文章数，可以自定义，我将10改成了5## Set per_page to 0 to disable pagination</h1></li>
+<li>per_page: 5</li>
+<li>pagination_dir: page</li>
+<li><h1 id="Disqus-Disqus插件，我们会替换成“多说”，不修改"><a href="#Disqus-Disqus插件，我们会替换成“多说”，不修改" class="headerlink" title="Disqus Disqus插件，我们会替换成“多说”，不修改"></a>Disqus Disqus插件，我们会替换成“多说”，不修改</h1></li>
+<li>disqus_shortname:</li>
+<li><h1 id="Extensions-这里配置站点所用主题和插件，暂默认-Plugins-https-github-com-tommy351-hexo-wiki-Plugins-Themes-https-github-com-tommy351-hexo-wiki-Themes"><a href="#Extensions-这里配置站点所用主题和插件，暂默认-Plugins-https-github-com-tommy351-hexo-wiki-Plugins-Themes-https-github-com-tommy351-hexo-wiki-Themes" class="headerlink" title="Extensions 这里配置站点所用主题和插件，暂默认## Plugins: https://github.com/tommy351/hexo/wiki/Plugins## Themes: https://github.com/tommy351/hexo/wiki/Themes"></a>Extensions 这里配置站点所用主题和插件，暂默认## Plugins: <a href="https://github.com/tommy351/hexo/wiki/Plugins##" target="_blank" rel="external">https://github.com/tommy351/hexo/wiki/Plugins##</a> Themes: <a href="https://github.com/tommy351/hexo/wiki/Themes" target="_blank" rel="external">https://github.com/tommy351/hexo/wiki/Themes</a></h1></li>
+<li>theme: landscape</li>
+<li>exclude_generator:</li>
+<li>plugins:</li>
+<li><ul>
+<li>hexo-generator-feed</li>
+</ul>
+</li>
+<li><ul>
+<li>hexo-generator-sitemap</li>
+</ul>
+</li>
+<li><h1 id="Deployment-站点部署到github要配置，上篇中已经讲过"><a href="#Deployment-站点部署到github要配置，上篇中已经讲过" class="headerlink" title="Deployment 站点部署到github要配置，上篇中已经讲过"></a>Deployment 站点部署到github要配置，上篇中已经讲过</h1></li>
+<li>deploy:</li>
+<li>type: github</li>
+<li>repository: <a href="https://github.com/zzzengyan/zzzengyan.github.io.git" target="_blank" rel="external">https://github.com/zzzengyan/zzzengyan.github.io.git</a></li>
+<li>branch: master<br>现在可以hexo generate，hexo server，打开localhost:4000查看效果了。<br>#Hexo博客的使用<br>好了，站点配置好了，我想发表一篇文章，怎么做呢？<br>1.hexo new “my new post”<br>2.在posts中打开这个文件，配置开头。</li>
+<li>title: my new post #可以改成中文的，如“新文章”</li>
+<li>date: 2013-05-29 07:56:29 #发表日期，一般不改动</li>
+<li>categories: blog #文章文类</li>
+<li>tags: [博客，文章] #文章标签，多于一项时用这种格式—#这里是正文，用markdown写<br>这部分大家都很熟悉了，就不再说了</li>
+</ul>
+
+            </div>
+        </div>
+    </article>
+
+    
+    
+<nav class="article-nav">
+  
+    <a href="/2016/02/27/20160227hexostudy5/" id="article-nav-newer" class="article-nav-link-wrap prev">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          hexostudy5:为你的hexo博客安装主题
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/02/27/20160227hexostudy3/" id="article-nav-older" class="article-nav-link-wrap next">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">hexostudy3:hexo部署详解</div>
+    </a>
+  
+</nav>
+
+    
+
+    
+</div>
+    </div>
+    <footer class="site-footer">
+        <div class="global-width">
+            <ul class="site-widget">
+                
+                <li class="widget widget-tag">
+                    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget-body">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux-Pro/">Linux Pro</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/LinuxServer/">LinuxServer</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MUST-READ/">MUST-READ</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Qiuzihe/">Qiuzihe</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/RequirementDocument/">RequirementDocument</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/architecture/">architecture</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/fusizhe/">fusizhe</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git-pro/">git pro</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/management/">management</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/markdown/">markdown</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nodejs/">nodejs</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/presentation/">presentation</a><span class="tag-list-count">15</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/qiuzihe/">qiuzihe</a><span class="tag-list-count">10</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ssh/">ssh</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/task/">task</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tuto/">tuto</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/uml/">uml</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/use-guide/">use guide</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/webtestresult-qiuzihe/">webtestresult qiuzihe</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/weekly/">weekly</a><span class="tag-list-count">20</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/zengyan/">zengyan</a><span class="tag-list-count">6</span></li></ul>
+    </div>
+  </div>
+
+                </li>
+                
+                <li class="widget widget-category">
+                    
+                </li>
+                
+                <li class="widget widget-recent_posts">
+                    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget-body">
+      <ul>
+        
+          <li>
+            <a href="/2016/05/29/20160529Qzh/">仇紫荷个人学习总结</a>
+          </li>
+        
+          <li>
+            <a href="/2016/05/22/20160522MeetingSummary/">2015-2016下学期第八次例会总结</a>
+          </li>
+        
+          <li>
+            <a href="/2016/05/17/20160516MeetringSummary/">2015-2016下学期第七次例会总结</a>
+          </li>
+        
+          <li>
+            <a href="/2016/05/09/20160508MeetingSummary/">2015-2016下学期第六次例会总结</a>
+          </li>
+        
+          <li>
+            <a href="/2016/05/08/20160508WeeklyMeeting/">20160508周例会</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+                </li>
+                
+            </ul>
+        </div>
+        <div class="site-info">
+            <address>
+                &copy; 2014 <a href="http://team.neomedia.top">CUC-IMC攻城狮</a> All Right Reserved. <br/>
+                Powered by <a href="http://hexo.io">Hexo</a>. Theme by <a href="http://zzoman.com">ZZOMAN</a> <br/>
+                方糖维护<a href="mailto:mengyu.dev@outlook.com?Subject=neomedia" target="_top">，联系 Send mail</a>
+            </address>
+        </div>
+    </footer>
+    
+    <script src="/libs/jquery-1.11.3.min.js" type="text/javascript"></script>
+    
+    <script src="/libs/fancybox/jquery.fancybox.js" type="text/javascript"></script>
+    
+    <script src="/js/site_init.js" type="text/javascript"></script>
+</body>
+</html>

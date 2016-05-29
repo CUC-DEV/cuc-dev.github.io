@@ -1,0 +1,320 @@
+
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    
+    <title>学习uml笔记（三）－－类图、活动图 | CUC-IMC攻城狮</title>
+    
+    <link rel="alternative" href="/atom.xml" title="CUC-IMC攻城狮" type="application/atom+xml">
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+    <link rel="stylesheet" href="/libs/fancybox/jquery.fancybox.css" charset="utf-8">
+    
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body class="site">
+    <header class="site-header">
+        <h1 class="site-title"><a href="/">CUC-IMC攻城狮</a></h1>
+        <nav class="site-nav">
+            <ul class="nav">
+                
+                <li><a href="/archives">Archives</a></li>
+                
+                
+                <li><a href="/atom.xml" title="RSS Feed">rss</a></li>
+                
+                <li><a class="toggle-search" href="#search">search</a></li>
+            </ul>
+        </nav>
+        <div class="site-search" id="search">
+            <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><input type="hidden" name="sitesearch" value="http://team.neomedia.top"></form>
+        </div>
+        
+            <div class="site-header-background" style="background-image:url(http://reumia.github.io/hexo-theme-zzoman2015/images/background-zzoman2015.jpg)"></div>
+        
+    </header>
+    <div class="site-body">
+        <div class="global-width">
+    <article class="article" data-layout="post" data-slug="20160226umlstudy3">
+        <div class="article-content">
+            
+            
+            <header class="article-header">
+                <div class="article-meta">
+                    <a href="/2016/02/26/20160226umlstudy3/" class="article-date">
+  <time datetime="2016-02-26T13:23:22.000Z">2016-02-26</time>
+</a>
+                    
+                    
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/qiuzihe/">qiuzihe</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/uml/">uml</a></li></ul>
+
+                </div>
+                
+    <h1 class="article-title" itemprop="name">
+      <a href="/2016/02/26/20160226umlstudy3/">学习uml笔记（三）－－类图、活动图</a>
+    </h1>
+
+            </header>
+            
+            <div class="article-body">
+                <p>通过（二）的学习，想必大家对绘制uml的流程以及基本的语法有一个初步的认识，在之后的内容中会更详细介绍多种uml图的绘制方法。</p>
+<h1 id="类图"><a href="#类图" class="headerlink" title="类图"></a>类图</h1><ul>
+<li>类之间的关系通过下面的符号定义:<br><img src="/img/uml/3/image1.png" alt="类之间的关系"></li>
+<li>示例1<pre><code>@startuml
+Class01 &quot;1&quot; *-- &quot;many&quot; Class02 : &lt; contains 
+Class03 o-- Class04 : aggregation &gt;
+Class05 --&gt; &quot;1&quot; Class06
+@enduml
+</code></pre><img src="/img/uml/3/image2.png" alt="示例1"></li>
+<li><p>示例1讲解</p>
+<pre><code>@startuml
+Class01 &quot;1&quot; *-- &quot;many&quot; Class02 : &lt; contains 
+</code></pre><p>（在关系之间使用标签来说明时, 使用”:” 后接标签文字。 对元素的说明,你可以在每一边使用 “” 来说明）</p>
+<pre><code>Class03 o-- Class04 : aggregation &gt;
+</code></pre><p>（在标签的开始或结束位置添加 &lt; 或 &gt; 以表明是哪个对象作用到哪个对象上）</p>
+<pre><code>Class05 --&gt; &quot;1&quot; Class06
+@enduml 
+</code></pre></li>
+<li><p>示例2</p>
+<pre><code>@startuml 
+class Dummy { 
+String data
+void methods() 
+}
+
+class Flight { 
+flightNumber : Integer 
+-departureTime : Date
++test()
+}
+class Dummy2 {
+{static} String id 
+{abstract} void methods() 
+}
+class User {
+.. Simple Getter .. 
++ getName()
++ getAddress()
+.. Some setter ..
++ setName()
+__ private data __ 
+int age
+-- encrypted -- 
+String password
+}
+@enduml
+</code></pre><p><img src="/img/uml/3/image3.png" alt="示例2"></p>
+</li>
+<li><p>示例2讲解<br>使用 { 把域或者方法括起来 注意,这种语法对于类型/名字的顺序是非常灵活的。</p>
+<pre><code>class Flight { 
+flightNumber : Integer 
+-departureTime : Date
+</code></pre><p>一旦你定义了域或者方法,你可以定义相应条目的可访问性质。<br><img src="/img/uml/3/image4.png" alt="性质"></p>
+<pre><code>+test()
+}
+class Dummy2 {
+{static} String id 
+{abstract} void methods() 
+}
+</code></pre><p>通过修饰符 static 或者 abstract,可以定义静态或者抽象的方法或者属性。</p>
+<pre><code>class User {
+.. Simple Getter .. 
+</code></pre><p>PlantUML 默认自动将方法和属性重新分组,你可以自己定义分隔符来重排方法和属性,下面的分隔符 都是可用的:– .. == __.</p>
+<pre><code>+ getName()
++ getAddress()
+.. Some setter ..
+</code></pre><p>还可以在分隔符中添加标题:</p>
+<pre><code>+ setName()
+__ private data __ 
+int age
+-- encrypted -- 
+String password
+}
+@enduml
+</code></pre></li>
+</ul>
+<h1 id="活动图"><a href="#活动图" class="headerlink" title="活动图"></a>活动图</h1><ul>
+<li>示例1：简单活动图<pre><code>@startuml
+:Hello world;
+:This is on defined on 
+several **lines** ; 
+@enduml
+</code></pre><img src="/img/uml/3/image5.png" alt="示例1"></li>
+<li>示例1讲解<pre><code>@startuml
+:Hello world;
+</code></pre>活动标签 (activity label) 以冒号开始,以分号结束。<pre><code>:This is on defined on 
+several **lines** ; 
+@enduml
+</code></pre></li>
+<li><p>示例2：条件语句</p>
+<pre><code>@startuml 
+start
+if (Graphviz installed?) then (yes) 
+:process all\ndiagrams;
+else (no)
+:process only
+__sequence__ and __activity__ diagrams; 
+endif
+stop 
+
+start   
+if (condition A) then (yes) 
+:Text 1;
+elseif (condition B) then (yes) 
+:Text 2;
+stop
+elseif (condition C) then (yes) 
+:Text 3;
+elseif (condition D) then (yes) 
+:Text 4;
+else (nothing)
+:Text else;
+endif
+stop
+@enduml
+</code></pre><p><img src="/img/uml/3/image6.png" alt="示例2"></p>
+</li>
+<li><p>示例2讲解</p>
+<pre><code>@startuml 
+start
+</code></pre><p>可以使用关键字 start 和 stop 表示图示的开始和结束。</p>
+<pre><code>if (Graphviz installed?) then (yes) 
+</code></pre><p>在图示中可以使用关键字 if,then 和 else 设置分支测试。标注文字则放在括号中。</p>
+<pre><code>:process all\ndiagrams;
+else (no)
+:process only
+__sequence__ and __activity__ diagrams; 
+endif
+stop 
+
+start   
+if (condition A) then (yes) 
+:Text 1;
+elseif (condition B) then (yes) 
+</code></pre><p>也可以使用关键字 elseif 设置多个分支测试。</p>
+<pre><code>:Text 2;
+stop
+elseif (condition C) then (yes) 
+:Text 3;
+elseif (condition D) then (yes) 
+:Text 4;
+else (nothing)
+:Text else;
+endif
+stop
+@enduml
+</code></pre></li>
+</ul>
+<h1 id="小练习"><a href="#小练习" class="headerlink" title="小练习"></a>小练习</h1><ul>
+<li>试一试画下面这幅图<br><img src="/img/uml/3/image7.png" alt="小练习"></li>
+<li>参考答案<br><img src="/img/uml/3/image8.png" alt="小练习参考答案"> </li>
+</ul>
+<h1 id="补充"><a href="#补充" class="headerlink" title="补充"></a>补充</h1><p>语法一次记不过来不要担心，在实际中多实践、多画图，语法自然就记住啦……Y(^_^)Y</p>
+
+            </div>
+        </div>
+    </article>
+
+    
+    
+<nav class="article-nav">
+  
+    <a href="/2016/02/27/20160227umlstudy5/" id="article-nav-newer" class="article-nav-link-wrap prev">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          学习uml笔记（五）－－对象图、其他补充
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/02/25/20160225umlstudy2/" id="article-nav-older" class="article-nav-link-wrap next">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">学习uml笔记（二）－－时序图、用例图</div>
+    </a>
+  
+</nav>
+
+    
+
+    
+</div>
+    </div>
+    <footer class="site-footer">
+        <div class="global-width">
+            <ul class="site-widget">
+                
+                <li class="widget widget-tag">
+                    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget-body">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux-Pro/">Linux Pro</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/LinuxServer/">LinuxServer</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MUST-READ/">MUST-READ</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Qiuzihe/">Qiuzihe</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/RequirementDocument/">RequirementDocument</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/architecture/">architecture</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/fusizhe/">fusizhe</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git-pro/">git pro</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/management/">management</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/markdown/">markdown</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nodejs/">nodejs</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/presentation/">presentation</a><span class="tag-list-count">15</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/qiuzihe/">qiuzihe</a><span class="tag-list-count">10</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ssh/">ssh</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/task/">task</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tuto/">tuto</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/uml/">uml</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/use-guide/">use guide</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/webtestresult-qiuzihe/">webtestresult qiuzihe</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/weekly/">weekly</a><span class="tag-list-count">20</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/zengyan/">zengyan</a><span class="tag-list-count">6</span></li></ul>
+    </div>
+  </div>
+
+                </li>
+                
+                <li class="widget widget-category">
+                    
+                </li>
+                
+                <li class="widget widget-recent_posts">
+                    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget-body">
+      <ul>
+        
+          <li>
+            <a href="/2016/05/29/20160529Qzh/">仇紫荷个人学习总结</a>
+          </li>
+        
+          <li>
+            <a href="/2016/05/22/20160522MeetingSummary/">2015-2016下学期第八次例会总结</a>
+          </li>
+        
+          <li>
+            <a href="/2016/05/17/20160516MeetringSummary/">2015-2016下学期第七次例会总结</a>
+          </li>
+        
+          <li>
+            <a href="/2016/05/09/20160508MeetingSummary/">2015-2016下学期第六次例会总结</a>
+          </li>
+        
+          <li>
+            <a href="/2016/05/08/20160508WeeklyMeeting/">20160508周例会</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+                </li>
+                
+            </ul>
+        </div>
+        <div class="site-info">
+            <address>
+                &copy; 2014 <a href="http://team.neomedia.top">CUC-IMC攻城狮</a> All Right Reserved. <br/>
+                Powered by <a href="http://hexo.io">Hexo</a>. Theme by <a href="http://zzoman.com">ZZOMAN</a> <br/>
+                方糖维护<a href="mailto:mengyu.dev@outlook.com?Subject=neomedia" target="_top">，联系 Send mail</a>
+            </address>
+        </div>
+    </footer>
+    
+    <script src="/libs/jquery-1.11.3.min.js" type="text/javascript"></script>
+    
+    <script src="/libs/fancybox/jquery.fancybox.js" type="text/javascript"></script>
+    
+    <script src="/js/site_init.js" type="text/javascript"></script>
+</body>
+</html>
